@@ -1,3 +1,13 @@
+"""
+Module: comp110_lab13
+
+Code for COMP110 Lab 13 (Image Manipulation).
+
+Author(s):
+1) Name - USD Email Address
+2) Name - USD Email Address
+"""
+
 import comp110_image
 
 def negative(my_pic):
