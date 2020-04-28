@@ -1,9 +1,9 @@
 """
 Module: comp110_image
 
-A module for basic image manipulation.
+Module that allows for basic 2D image manipulation.
 
-Author: Dr. Sat Garcia (sat@sandiego.edu)
+Author: Sat Garcia (sat@sandiego.edu)
 """
 
 from tkinter import *
@@ -18,9 +18,9 @@ class Color:
         Color.check_rgb_value_range(g)
         Color.check_rgb_value_range(b)
 
-        self.__red = r
-        self.__green = g
-        self.__blue = b
+        self.__red = int(r)
+        self.__green = int(g)
+        self.__blue = int(b)
 
     def copy(self):
         """Returns a copy of this Color object."""
@@ -49,14 +49,18 @@ class Color:
         """Returns red, green, and blue components as a tuple."""
         return (self.__red, self.__green, self.__blue)
 
+    def get_average(self):
+        """Returns the average value of color components."""
+        return (self.__red + self.__green + self.__blue) // 3
+
     def set_rgb(self, new_rgb):
         """Changes red, green, and blue components to given values."""
         Color.check_rgb_value_range(new_rgb[0])
         Color.check_rgb_value_range(new_rgb[1])
         Color.check_rgb_value_range(new_rgb[2])
-        self.__red = new_rgb[0]
-        self.__green = new_rgb[1]
-        self.__blue = new_rgb[2]
+        self.__red = int(new_rgb[0])
+        self.__green = int(new_rgb[1])
+        self.__blue = int(new_rgb[2])
 
     def set_red(self, new_red):
         """Changes value of red component."""
@@ -93,6 +97,7 @@ class Color:
     getRed = get_red
     getGreen = get_green
     getBlue = get_blue
+    getAverage = get_average
     setRGB = set_rgb
     setRed = set_red
     setGreen = set_green
@@ -408,7 +413,7 @@ class Picture:
     getTitle = get_title
     getWidth = get_width
     getHeight = get_height
-    setTitle = set_title
+    setPixel = set_color
 
 
 if __name__ == "__main__":
