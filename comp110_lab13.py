@@ -11,7 +11,12 @@ Author(s):
 import comp110_image
 
 def negative(my_pic):
-    """ Applies the 'negative' filter to my_pic. """
+    """
+    Applies the "negative" filter to the given picture.
+
+    Parameter(s):
+    my_pic (type: Picture) - The image to filter.
+    """
     for row in range(my_pic.getHeight()):
         for col in range(my_pic.getWidth()):
             pix = my_pic.getPixel(col, row)
