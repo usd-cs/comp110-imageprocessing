@@ -1,7 +1,7 @@
 """
-Module: comp110_lab13
+Module: comp110_lab12
 
-Code for COMP110 Lab 13 (Image Manipulation).
+Code for COMP110 Lab 12 (Image Manipulation).
 
 Author(s):
 1) Name - USD Email Address
